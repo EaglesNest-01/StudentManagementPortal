@@ -1,30 +1,41 @@
-<%-- 
-    Document   : register
-    Created on : 13 Jul 2025, 13:15:03
-    Author     : rmara
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Registration</title>
-        <!-- Link to your CSS file in the css directory -->
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
-    </head>
-    <body>
-            <div class="register-container">
-                 <h2>Student Registration</h2>
-                     <form onsubmit="event.preventDefault(); window.location.href='dashboard.jsp';">
-                        <input type="text" placeholder="Name" required>
-                        <input type="text" placeholder="Surname" required>
-                        <input type="text" placeholder="Student number" required>
-                        <input type="text" placeholder="Year" required>
-                        <input type="email" placeholder="Email" required>
-                        <input type="password" placeholder="Password" required>
-                        <button type="submit">Register</button>
-                    </form>
-             </div>
-    </body>
+<head>
+    <title>Student Registration</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    
+    <div class="register-container">
+        <%-- Show error if present --%>
+        <% if (request.getAttribute("error") != null) { %>
+            <div style="color:red; font-weight:bold;">
+            <%= request.getAttribute("error") %>
+            </div>
+        <% } %>
+        <h2>Student Registration</h2>
+        
+        <form action="RegisterServlet" method="post">
+    <input type="text" name="student_number" placeholder="Student Number" 
+        value="<%= request.getAttribute("student_number") != null ? request.getAttribute("student_number") : "" %>" required />
+
+    <input type="text" name="name" placeholder="Name" 
+        value="<%= request.getAttribute("name") != null ? request.getAttribute("name") : "" %>" required />
+
+    <input type="text" name="surname" placeholder="Surname" 
+        value="<%= request.getAttribute("surname") != null ? request.getAttribute("surname") : "" %>" required />
+
+    <input type="email" name="email" placeholder="Email" 
+        value="<%= request.getAttribute("email") != null ? request.getAttribute("email") : "" %>" required />
+
+    <input type="text" name="phone" placeholder="Phone" 
+        value="<%= request.getAttribute("phone") != null ? request.getAttribute("phone") : "" %>" required />
+
+    <input type="password" name="password" placeholder="Password" required />
+
+    <button type="submit">Register</button>
+</form>
+    </div>
+</body>
 </html>
