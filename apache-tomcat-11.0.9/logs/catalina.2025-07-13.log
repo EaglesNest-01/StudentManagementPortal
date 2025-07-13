@@ -1,0 +1,62 @@
+13-Jul-2025 14:00:04.345 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.9
+13-Jul-2025 14:00:04.349 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 1 2025 20:39:04 UTC
+13-Jul-2025 14:00:04.349 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.9.0
+13-Jul-2025 14:00:04.350 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+13-Jul-2025 14:00:04.350 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+13-Jul-2025 14:00:04.350 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Jul-2025 14:00:04.350 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-21
+13-Jul-2025 14:00:04.350 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.7+8-LTS-245
+13-Jul-2025 14:00:04.350 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+13-Jul-2025 14:00:04.350 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9
+13-Jul-2025 14:00:04.350 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9
+13-Jul-2025 14:00:04.357 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\conf\logging.properties
+13-Jul-2025 14:00:04.357 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Jul-2025 14:00:04.357 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Jul-2025 14:00:04.357 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+13-Jul-2025 14:00:04.357 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+13-Jul-2025 14:00:04.357 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+13-Jul-2025 14:00:04.357 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+13-Jul-2025 14:00:04.357 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+13-Jul-2025 14:00:04.358 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+13-Jul-2025 14:00:04.358 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+13-Jul-2025 14:00:04.358 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9
+13-Jul-2025 14:00:04.358 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9
+13-Jul-2025 14:00:04.358 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\temp
+13-Jul-2025 14:00:04.360 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.6].
+13-Jul-2025 14:00:04.365 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.5.0 8 Apr 2025]
+13-Jul-2025 14:00:04.564 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+13-Jul-2025 14:00:04.580 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [351] milliseconds
+13-Jul-2025 14:00:04.615 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Jul-2025 14:00:04.615 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.9]
+13-Jul-2025 14:00:04.625 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\webapps\docs]
+13-Jul-2025 14:00:04.859 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\webapps\docs] has finished in [235] ms
+13-Jul-2025 14:00:04.859 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\webapps\examples]
+13-Jul-2025 14:00:05.212 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\webapps\examples] has finished in [353] ms
+13-Jul-2025 14:00:05.212 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\webapps\host-manager]
+13-Jul-2025 14:00:05.246 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\webapps\host-manager] has finished in [34] ms
+13-Jul-2025 14:00:05.246 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\webapps\manager]
+13-Jul-2025 14:00:05.279 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\webapps\manager] has finished in [33] ms
+13-Jul-2025 14:00:05.279 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\webapps\ROOT]
+13-Jul-2025 14:00:05.301 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\webapps\ROOT] has finished in [22] ms
+13-Jul-2025 14:00:05.304 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+13-Jul-2025 14:00:05.320 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [739] milliseconds
+13-Jul-2025 14:00:09.572 WARNING [http-nio-8080-exec-2] org.apache.catalina.realm.LockOutRealm.filterLockedAccounts An attempt was made to authenticate the locked user [admin ]
+13-Jul-2025 14:00:09.743 WARNING [http-nio-8080-exec-4] org.apache.catalina.realm.LockOutRealm.filterLockedAccounts An attempt was made to authenticate the locked user [admin ]
+13-Jul-2025 14:00:09.897 WARNING [http-nio-8080-exec-6] org.apache.catalina.realm.LockOutRealm.filterLockedAccounts An attempt was made to authenticate the locked user [admin ]
+13-Jul-2025 14:00:10.074 WARNING [http-nio-8080-exec-8] org.apache.catalina.realm.LockOutRealm.filterLockedAccounts An attempt was made to authenticate the locked user [admin ]
+13-Jul-2025 14:00:10.243 WARNING [http-nio-8080-exec-10] org.apache.catalina.realm.LockOutRealm.filterLockedAccounts An attempt was made to authenticate the locked user [admin ]
+13-Jul-2025 14:00:10.394 WARNING [http-nio-8080-exec-2] org.apache.catalina.realm.LockOutRealm.filterLockedAccounts An attempt was made to authenticate the locked user [admin ]
+13-Jul-2025 14:00:10.539 WARNING [http-nio-8080-exec-4] org.apache.catalina.realm.LockOutRealm.filterLockedAccounts An attempt was made to authenticate the locked user [admin ]
+13-Jul-2025 14:00:10.709 WARNING [http-nio-8080-exec-6] org.apache.catalina.realm.LockOutRealm.filterLockedAccounts An attempt was made to authenticate the locked user [admin ]
+13-Jul-2025 14:00:10.875 WARNING [http-nio-8080-exec-8] org.apache.catalina.realm.LockOutRealm.filterLockedAccounts An attempt was made to authenticate the locked user [admin ]
+13-Jul-2025 14:00:11.025 WARNING [http-nio-8080-exec-10] org.apache.catalina.realm.LockOutRealm.filterLockedAccounts An attempt was made to authenticate the locked user [admin ]
+13-Jul-2025 14:00:11.177 WARNING [http-nio-8080-exec-2] org.apache.catalina.realm.LockOutRealm.filterLockedAccounts An attempt was made to authenticate the locked user [admin ]
+13-Jul-2025 14:00:20.778 INFO [http-nio-8080-exec-10] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\conf\Catalina\localhost\StudentManagementWebApp.xml]
+13-Jul-2025 14:00:20.780 WARNING [http-nio-8080-exec-10] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/StudentManagementWebApp] in deployment descriptor [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\conf\Catalina\localhost\StudentManagementWebApp.xml] has been ignored
+13-Jul-2025 14:00:21.192 INFO [http-nio-8080-exec-10] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Jul-2025 14:00:21.195 INFO [http-nio-8080-exec-10] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\conf\Catalina\localhost\StudentManagementWebApp.xml] has finished in [417] ms
+13-Jul-2025 14:00:21.199 INFO [http-nio-8080-exec-1] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/StudentManagementWebApp]] after start() had already been called. The second call will be ignored.
+13-Jul-2025 14:00:38.148 INFO [http-nio-8080-exec-3] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\conf\Catalina\localhost\StudentManagementWebAppPortal.xml]
+13-Jul-2025 14:00:38.149 WARNING [http-nio-8080-exec-3] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/StudentManagementWebAppPortal] in deployment descriptor [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\conf\Catalina\localhost\StudentManagementWebAppPortal.xml] has been ignored
+13-Jul-2025 14:00:38.179 INFO [http-nio-8080-exec-3] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\conf\Catalina\localhost\StudentManagementWebAppPortal.xml] has finished in [31] ms
+13-Jul-2025 14:00:38.181 INFO [http-nio-8080-exec-4] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/StudentManagementWebAppPortal]] after start() had already been called. The second call will be ignored.
