@@ -16,9 +16,9 @@
     <body>
         <div class="login-container">
             <h2>Student Wellness Login</h2>
-            <form>
-                <input type="text" placeholder="Student ID" required>
-                <input type="password" placeholder="Password" required>
+            <form action="LoginServlet" method="POST">
+                <input type="text" placeholder="Student ID" name ="studentId" required>
+                <input type="password" placeholder="Password" name="password" required>
                 <button type="submit">Login</button>
             </form>
             <div class="note">
