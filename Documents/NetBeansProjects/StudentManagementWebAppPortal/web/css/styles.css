@@ -1,0 +1,344 @@
+/* Dark Dashboard Theme Stylesheet for StudentManagementWebAppPortal */
+
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+:root {
+  /* Core Colors */
+  --background: #111112;
+  --surface: #18181b;
+  --card: #222226;
+  --border: #2a2a2f;
+  --input-bg: #18181b;
+  --input-border: #2a2a2f;
+  --text-main: #f3f3f5;
+  --text-muted: #b3b3b9;
+  --accent: #f43f5e;
+  --accent-muted: #c72e46;
+  --accent-bg: #23141d;
+  --button-bg: #232326;
+  --button-hover: #313136;
+  --shadow: 0 2px 16px 0 rgba(0,0,0,0.35);
+
+  /* Typography */
+  --font-family: 'Inter', Arial, Helvetica, sans-serif;
+  --font-size-lg: 2.5rem;
+  --font-size-md: 1.25rem;
+  --font-size: 1rem;
+  --font-size-sm: 0.875rem;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+  --font-weight: 400;
+
+  /* Border Radius */
+  --radius: 16px;
+  --radius-sm: 8px;
+  --transition: 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Universal body styling */
+body {
+  background: var(--background);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  margin: 0;
+  font-size: var(--font-size);
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-main);
+  font-family: var(--font-family);
+  margin: 0 0 1rem 0;
+  font-weight: var(--font-weight-black);
+}
+h1 {
+  font-size: 2.7rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: -2px;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: var(--font-weight-black);
+}
+
+/* Main container for index.html */
+.container {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.5rem 2rem;
+  max-width: 570px;
+  margin: 4rem auto;
+  text-align: center;
+}
+
+/* Navigation links styling for index.html */
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.nav-links a {
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-size: var(--font-size-md);
+  border-radius: var(--radius-sm);
+  padding: 1rem 0;
+  font-weight: var(--font-weight-bold);
+  transition: background var(--transition), color var(--transition);
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.08);
+}
+.nav-links a:hover {
+  background: var(--accent-muted);
+  color: #fff;
+}
+
+/* Dashboard, Index, etc. */
+.dashboard-container,
+.index-container {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin: 3rem auto;
+  padding: 2rem;
+  max-width: 370px;
+  text-align: center;
+}
+
+/* Card containers for register/login */
+.register-container,
+.login-container {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  max-width: 370px;
+  margin: 4rem auto;
+  padding: 2.5rem 2rem;
+}
+
+.register-container h2,
+.login-container h2 {
+  font-size: 2rem;
+  font-weight: var(--font-weight-black);
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-main);
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius-sm);
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.7rem 1rem;
+  transition: border-color var(--transition);
+}
+
+input:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+/* Buttons */
+button[type="submit"] {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  padding: 0.7rem 0;
+  cursor: pointer;
+  transition: background var(--transition);
+  margin-top: 0.4rem;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.05);
+}
+
+button[type="submit"]:hover {
+  background: var(--accent-muted);
+}
+
+/* Login note */
+.login-container .note {
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  margin-top: 1.2rem;
+}
+
+/* Utility classes */
+.flex {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Card for dashboard.jsp and index.jsp */
+.dashboard-container h1,
+.index-container h1 {
+  font-size: 2.2rem;
+  font-weight: var(--font-weight-black);
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--card);
+  border-radius: 8px;
+}
+
+/* ...existing styles above... */
+
+/* SHADCN-Inspired Card Styles for Wellness Resources */
+.wellness-wrapper {
+  max-width: 950px;
+  margin: 3rem auto;
+  padding: 2rem 1rem;
+}
+
+.wellness-wrapper h2 {
+  color: var(--text-main);
+  font-family: var(--font-family);
+  font-size: 2.1rem;
+  font-weight: var(--font-weight-black);
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.wellness-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.wellness-card {
+  background: #171717;
+  border-radius: 20px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.35);
+  border: 1.5px solid #232326;
+  color: #f3f3f5;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  min-height: 110px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.18rem;
+  font-weight: 700;
+  transition: box-shadow 0.17s cubic-bezier(0.4,0,0.2,1), border-color 0.17s cubic-bezier(0.4,0,0.2,1), background 0.17s;
+}
+
+.wellness-card:hover {
+  box-shadow: 0 4px 24px 0 rgba(244,63,94,0.18), 0 2px 16px 0 rgba(0,0,0,0.45);
+  border-color: #f43f5e;
+  background: #1c1c1f;
+}
+
+@media (max-width: 900px) {
+  .wellness-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+body {
+  background: #111112;
+}
+   
+/* ...existing styles above... */
+
+/* Welcome/Dashboard Page - SHADCN-Inspired Card Styles */
+.welcome-container {
+  max-width: 600px;
+  margin: 4rem auto;
+  background: #171717;
+  border-radius: 20px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.35);
+  border: 1.5px solid #232326;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #f3f3f5;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+.welcome-container h1 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin-bottom: 1.4rem;
+  color: #f3f3f5;
+  letter-spacing: -1px;
+}
+
+.welcome-container p {
+  font-size: 1.12rem;
+  color: #b3b3b9;
+  margin-bottom: 2.3rem;
+  font-weight: 500;
+}
+
+.welcome-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  align-items: center;
+}
+
+.button {
+  background: #f43f5e;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 1rem 0;
+  width: 100%;
+  max-width: 340px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.10);
+  transition: background 0.16s cubic-bezier(0.4,0,0.2,1), box-shadow 0.16s;
+  text-align: center;
+  display: inline-block;
+}
+
+.button:hover {
+  background: #c72e46;
+  box-shadow: 0 4px 24px 0 rgba(244,63,94,0.18), 0 2px 16px 0 rgba(0,0,0,0.45);
+}
+
+@media (max-width: 650px) {
+  .welcome-container {
+    max-width: 95vw;
+    padding: 1.5rem 0.5rem;
+  }
+  .button {
+    max-width: 98vw;
+  }
+}

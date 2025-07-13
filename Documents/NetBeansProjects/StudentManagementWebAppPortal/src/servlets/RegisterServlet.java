@@ -13,10 +13,9 @@ public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
 
-        // Get input from form
         String studentNumber = request.getParameter("student_number");
         String name = request.getParameter("name");
         String surname = request.getParameter("surname");
@@ -25,42 +24,71 @@ public class RegisterServlet extends HttpServlet {
         String password = request.getParameter("password");
 
         try {
-            // Hash password
             String hashedPassword = hashPassword(password);
-
-            // Create student object
             Student student = new Student(studentNumber, name, surname, email, phone, hashedPassword);
 
-            // Save to DB
             try (Connection conn = ConnectionProvider.getConnection()) {
 
-                // Check for existing email
-                PreparedStatement check = conn.prepareStatement("SELECT * FROM students WHERE email = ?");
-                check.setString(1, student.getEmail());
-                ResultSet rs = check.executeQuery();
-
-                if (rs.next()) {
-                    out.println("<h3>Email already exists!</h3>");
-                } else {
-                    PreparedStatement pst = conn.prepareStatement(
-                        "INSERT INTO students (student_number, name, surname, email, phone, password) VALUES (?, ?, ?, ?, ?, ?)"
-                    );
-                    pst.setString(1, student.getStudentNumber());
-                    pst.setString(2, student.getName());
-                    pst.setString(3, student.getSurname());
-                    pst.setString(4, student.getEmail());
-                    pst.setString(5, student.getPhone());
-                    pst.setString(6, student.getPassword());
-                    pst.executeUpdate();
-
-                    out.println("<h3>Registration successful!</h3>");
+                if (exists(conn, "student_number", student.getStudentNumber())) {
+                    sendBackWithError(request, response, "Student number already exists.", student);
+                    return;
                 }
+
+                if (exists(conn, "email", student.getEmail())) {
+                    sendBackWithError(request, response, "Email already exists.", student);
+                    return;
+                }
+
+                if (exists(conn, "phone", student.getPhone())) {
+                    sendBackWithError(request, response, "Phone number already exists.", student);
+                    return;
+                }
+
+                PreparedStatement pst = conn.prepareStatement(
+                        "INSERT INTO students (student_number, name, surname, email, phone, password) VALUES (?, ?, ?, ?, ?, ?)"
+                );
+                pst.setString(1, student.getStudentNumber());
+                pst.setString(2, student.getName());
+                pst.setString(3, student.getSurname());
+                pst.setString(4, student.getEmail());
+                pst.setString(5, student.getPhone());
+                pst.setString(6, student.getPassword());
+                pst.executeUpdate();
+
+                HttpSession session = request.getSession();
+                session.setAttribute("studentName", student.getName());
+
+                response.sendRedirect("dashboard.jsp");
             }
 
         } catch (Exception e) {
             e.printStackTrace();
-            out.println("<h3>Error: " + e.getMessage() + "</h3>");
+            request.setAttribute("error", "Registration failed: " + e.getMessage());
+            request.getRequestDispatcher("register.jsp").forward(request, response);
         }
+    }
+
+    private boolean exists(Connection conn, String field, String value) throws SQLException {
+        String query = "SELECT 1 FROM students WHERE " + field + " = ?";
+        try (PreparedStatement stmt = conn.prepareStatement(query)) {
+            stmt.setString(1, value);
+            try (ResultSet rs = stmt.executeQuery()) {
+                return rs.next();
+            }
+        }
+    }
+
+    private void sendBackWithError(HttpServletRequest request, HttpServletResponse response, String errorMsg, Student student)
+            throws ServletException, IOException {
+
+        request.setAttribute("error", errorMsg);
+        request.setAttribute("student_number", student.getStudentNumber());
+        request.setAttribute("name", student.getName());
+        request.setAttribute("surname", student.getSurname());
+        request.setAttribute("email", student.getEmail());
+        request.setAttribute("phone", student.getPhone());
+
+        request.getRequestDispatcher("register.jsp").forward(request, response);
     }
 
     private String hashPassword(String password) throws Exception {
@@ -73,4 +101,3 @@ public class RegisterServlet extends HttpServlet {
         return sb.toString();
     }
 }
-

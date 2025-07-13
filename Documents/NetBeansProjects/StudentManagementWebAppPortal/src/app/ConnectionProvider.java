@@ -10,9 +10,9 @@ public class ConnectionProvider {
         if (conn == null || conn.isClosed()) {
             Class.forName("org.postgresql.Driver");
             conn = DriverManager.getConnection(
-                "jdbc:postgresql://localhost:5432/StudentInfo",
-                "postgres",
-                "UwU123"
+                "jdbc:postgresql://localhost:5432/StudentInfo", // DB name: Student
+                "postgres",                                 // Username
+                "UwU123"                                     // Password
             );
         }
         return conn;
