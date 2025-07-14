@@ -1,4 +1,15 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%@ page import="jakarta.servlet.http.HttpSession" %>
+<%
+    // Check if a session exists and has studentName
+    if (session == null || session.getAttribute("student_number") == null) {
+        response.sendRedirect("login.jsp");
+        return;
+    }//checks for session as well as studentNumber during login
+
+    //String name = (String) session.getAttribute("studentName");
+%>
 <!DOCTYPE html>
 <html>
     <head>

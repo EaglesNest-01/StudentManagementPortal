@@ -63,7 +63,7 @@ public class LoginServlet extends HttpServlet {
              if (hashedInputPassword.equals(hashedPasswordFromDB)) {
                     // ✅ Successful login
                     HttpSession session = request.getSession();
-                    session.setAttribute("studentName", rs.getString("name"));
+                    session.setAttribute("student_number", rs.getString("name"));
                     response.sendRedirect("dashboard.jsp");
                 } else {
                     // ❌ Incorrect password
