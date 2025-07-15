@@ -21,6 +21,7 @@ import java.util.Base64;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
+import java.security.NoSuchAlgorithmException;
 
 /**
  *
@@ -78,7 +79,7 @@ public class LoginServlet extends HttpServlet {
             Class.forName("org.postgresql.Driver");
             Connection conn = DriverManager.getConnection(
                 "jdbc:postgresql://localhost:5432/StudentInfo",
-                "admin", "admin"
+                "postgres", "UwU123"
             );   
         
          // 3. Query user by email
@@ -90,17 +91,16 @@ public class LoginServlet extends HttpServlet {
             if (rs.next()) {
                 // 4. Retrieve hashed password from DB
                 String hashedPasswordFromDB = rs.getString("password");
-
                 // 5. Hash the input password the same way
                 MessageDigest md = MessageDigest.getInstance("SHA-256");
                 byte[] hashedBytes = md.digest(password.getBytes(StandardCharsets.UTF_8));
-                String hashedInputPassword = Base64.getEncoder().encodeToString(hashedBytes);
-
+                String hashedInputPassword = hashPasswordToHex(password); //stores password in hexed version
+               
                 // 6. Compare passwords    
-             if (hashedInputPassword.equals(hashedPasswordFromDB)) {
+             if (hashedInputPassword.equals(hashedPasswordFromDB.trim())) {
                     // Successful login
                     HttpSession session = request.getSession();
-                    session.setAttribute("student_number", rs.getString("name"));
+                    session.setAttribute("student_number", rs.getString("student_number"));
                     response.sendRedirect("dashboard.jsp");
                 } else {
                     // Incorrect password
@@ -118,6 +118,22 @@ public class LoginServlet extends HttpServlet {
             request.setAttribute("error", "Server error occurred.");
             request.getRequestDispatcher("login.jsp").forward(request, response);
         }//catch implemented in case server error occurs
+    }
+    //This method hashes password in hex format for password in database
+        private String hashPasswordToHex(String password) throws NoSuchAlgorithmException {
+        MessageDigest md = MessageDigest.getInstance("SHA-256");
+        byte[] hashedBytes = md.digest(password.getBytes(StandardCharsets.UTF_8));
+        
+        // Convert byte array to hex string
+        StringBuilder hexString = new StringBuilder();
+        for (byte b : hashedBytes) {
+            String hex = Integer.toHexString(0xff & b);
+            if (hex.length() == 1) {
+                hexString.append('0');
+            }
+            hexString.append(hex);
+        }
+        return hexString.toString();
     }
 
     /**
