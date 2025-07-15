@@ -1,0 +1,106 @@
+15-Jul-2025 17:02:38.732 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.9
+15-Jul-2025 17:02:38.734 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 1 2025 20:39:04 UTC
+15-Jul-2025 17:02:38.735 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.9.0
+15-Jul-2025 17:02:38.735 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+15-Jul-2025 17:02:38.735 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+15-Jul-2025 17:02:38.735 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+15-Jul-2025 17:02:38.735 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-21
+15-Jul-2025 17:02:38.735 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.7+8-LTS-245
+15-Jul-2025 17:02:38.735 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+15-Jul-2025 17:02:38.735 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9
+15-Jul-2025 17:02:38.735 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9
+15-Jul-2025 17:02:38.745 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\conf\logging.properties
+15-Jul-2025 17:02:38.745 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+15-Jul-2025 17:02:38.745 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+15-Jul-2025 17:02:38.745 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+15-Jul-2025 17:02:38.745 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+15-Jul-2025 17:02:38.745 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+15-Jul-2025 17:02:38.745 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+15-Jul-2025 17:02:38.745 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+15-Jul-2025 17:02:38.745 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+15-Jul-2025 17:02:38.745 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+15-Jul-2025 17:02:38.745 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9
+15-Jul-2025 17:02:38.745 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9
+15-Jul-2025 17:02:38.745 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\temp
+15-Jul-2025 17:02:38.870 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.6].
+15-Jul-2025 17:02:38.874 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.5.0 8 Apr 2025]
+15-Jul-2025 17:02:39.082 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+15-Jul-2025 17:02:39.098 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [497] milliseconds
+15-Jul-2025 17:02:39.151 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+15-Jul-2025 17:02:39.151 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.9]
+15-Jul-2025 17:02:39.160 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\conf\Catalina\localhost\StudentManagementWebApp.xml]
+15-Jul-2025 17:02:39.174 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/StudentManagementWebApp] in deployment descriptor [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\conf\Catalina\localhost\StudentManagementWebApp.xml] has been ignored
+15-Jul-2025 17:02:39.198 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\conf\Catalina\localhost\StudentManagementWebApp.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:569)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:593)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1831)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:488)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:379)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1582)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:265)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:389)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:336)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:743)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:769)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1160)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:716)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:866)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:759)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:342)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@7de62196]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:406)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:179)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4127)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4249)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:566)
+		... 34 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [D:\CODE\StudentManagementPortal\Documents\NetBeansProjects\StudentManagementWebApp\build\web] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:706)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		... 38 more
+15-Jul-2025 17:02:39.218 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\conf\Catalina\localhost\StudentManagementWebApp.xml] has finished in [58] ms
+15-Jul-2025 17:02:39.219 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\conf\Catalina\localhost\StudentManagementWebAppPortal.xml]
+15-Jul-2025 17:02:39.219 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/StudentManagementWebAppPortal] in deployment descriptor [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\conf\Catalina\localhost\StudentManagementWebAppPortal.xml] has been ignored
+15-Jul-2025 17:02:39.985 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+15-Jul-2025 17:02:40.022 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\conf\Catalina\localhost\StudentManagementWebAppPortal.xml] has finished in [803] ms
+15-Jul-2025 17:02:40.023 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\webapps\docs]
+15-Jul-2025 17:02:40.061 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\webapps\docs] has finished in [38] ms
+15-Jul-2025 17:02:40.061 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\webapps\examples]
+15-Jul-2025 17:02:40.761 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\webapps\examples] has finished in [700] ms
+15-Jul-2025 17:02:40.761 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\webapps\host-manager]
+15-Jul-2025 17:02:40.800 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\webapps\host-manager] has finished in [39] ms
+15-Jul-2025 17:02:40.801 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\webapps\manager]
+15-Jul-2025 17:02:40.831 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\webapps\manager] has finished in [29] ms
+15-Jul-2025 17:02:40.831 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\webapps\ROOT]
+15-Jul-2025 17:02:40.865 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\CODE\StudentManagementPortal\apache-tomcat-11.0.9\webapps\ROOT] has finished in [34] ms
+15-Jul-2025 17:02:40.868 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+15-Jul-2025 17:02:40.892 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1792] milliseconds
+15-Jul-2025 17:02:45.881 INFO [http-nio-8080-exec-7] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+15-Jul-2025 17:23:23.834 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+15-Jul-2025 17:23:23.835 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+15-Jul-2025 17:23:23.839 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+15-Jul-2025 17:23:23.852 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [StudentManagementWebAppPortal] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+15-Jul-2025 17:23:23.857 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+15-Jul-2025 17:23:23.875 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
