@@ -16,6 +16,15 @@
     <body>
         <div class="login-container">
             <h2>Student Wellness Login</h2>
+            <%-- Display error message if there is one --%>
+<%
+    String error = (String) request.getAttribute("error");
+    if (error != null) {
+%>
+    <p style="color: red;"><%= error %></p>
+<%
+    }
+%>
             <form action="login" method="post">
                 <input type="text" placeholder="Student ID" name ="studentId" required>
                 <input type="password" placeholder="Password" name="password" required>
