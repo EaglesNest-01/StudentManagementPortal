@@ -1,3 +1,6 @@
+# Github Link 
+https://github.com/EaglesNest-01/StudentManagementPortal_M1/edit/main/README.md
+
  1. Database Setup (PostgreSQL)
 
 First, you need to set up the database where student data will be stored.
